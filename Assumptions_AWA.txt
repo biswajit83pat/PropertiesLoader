@@ -1,0 +1,12 @@
+1. Could use Enum for factory methods.
+2. Could later write setters for changing the property files at appropriate locations.
+3. Could use a dumping mechanism in case the threads are interrupted midway so that the properties file(s) are interrupted.
+4. Could use a persistence mechanism for the containing a snapshot of the map entries (Properties) that have been loaded.
+
+
+________________________________________________________________
+
+1. SSL should be used at all times for security
+2. Caching can be implemented via Last-Modified header mechanism.
+3. X-HTTP-Method-Override can be used for sites which accept only POST requests.
+4. 

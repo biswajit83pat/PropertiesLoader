@@ -1,0 +1,1 @@
+file://INSISCSLT300539/Users/50120i1055/Desktop/Properties/aws.properties file://INSISCSLT300539/Users/50120i1055/Desktop/Properties/config.json file://INSISCSLT300539/Users/50120i1055/Desktop/Properties/jdbc.properties classpath:resources/test1.properties classpath:resources/test1.json

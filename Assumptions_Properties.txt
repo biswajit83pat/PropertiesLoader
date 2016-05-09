@@ -1,0 +1,4 @@
+1. Could use Enum for factory methods.
+2. Could later write setters for changing the property files at appropriate locations.
+3. Could use a dumping mechanism in case the threads are interrupted midway so that the properties file(s) are interrupted.
+4. Could use a persistence mechanism for the containing a snapshot of the map entries (Properties) that have been loaded.

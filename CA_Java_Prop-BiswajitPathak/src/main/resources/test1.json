@@ -1,0 +1,13 @@
+{
+
+   "download.status": true,
+   "checkFlag": true,
+   "timeOut": 3600,
+   "twitterHandle": "xxxxBixxxx",
+   "visibility.timeOut": 30,
+
+   "score.deGauss": 2.4,
+
+   "Gaussian": false
+
+}

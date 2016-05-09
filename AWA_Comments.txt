@@ -1,0 +1,46 @@
+1. Nouns should be used instead of verb like collect (collectinos) and query (queries)
+2. WeatherException should be added with utility methods.
+3. All System.out.println() in WeatherServer should be replaced with Logger.
+4. Need to see if Logger class needs to be changed.
+5. You can use Asynchronous Server API for performance <http://www.roytuts.com/simple-asynchronous-rest-service-using-jersey/>
+6. http://www.notshabby.net/2013/08/gracefully-terminating-a-grizzly-transport/
+http://stackoverflow.com/questions/25112576/grizzly-httpserver-clean-shutdown-got-warning-grizzly0032
+http://stackoverflow.com/questions/23146963/grizzly-graceful-shutdown-throws-interruptedexception
+
+***7. Check for shared instance variables in ReastWeatherQueryEndpoint.java
+8.     public static Map<AirportData, Integer> requestFrequency = new HashMap<AirportData, Integer>();
+ change to use ConceurrentHashMap
+
+9. API needs to be versioned.
+10. Use error codes.
+11.  X-HTTP-Method-Override : http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/
+12. see if POST /collect/airport/{iata}/{lat}/{long} can be done with ? query parameters
+13. HashCode implementation to be done for beans along with equals method such as AirportData.java
+14. Make RestWeatherQueryEndpoint.calculateDistance() as synchrpnized
+***15. Pagination/Partial information to be done such as for RestWeatherQueryEndpoint
+***16. Add synchroznied support for RestWeatherQueryEndpoint.get()
+17. public void updateRequestFrequency(String iata, Double radius) { should be private
+18. RestWeatherQueryEndpoint.findAirportData() should be util method.
+19. RestWeatherQueryEndpoint.getAirportDataIdx(String) need not be public.
+20. In RestWeatherQueryEndpoint.ping() call ai.getLastUpdatedTime first and then check for null checks. More filtration will be done at this point and efficient and fast as well.
+***21. 
+
+Check if : for (Map.Entry<Double, Integer> e : radiusFreq.entrySet()) {
+            int i = e.getKey().intValue() % 10;
+            hist[i] += e.getValue();
+        }
+
+can be optimized in Java 8. Also parallel Stream can be opened?
+
+22.     protected static List<AirportData> airportData = new ArrayList<>();
+should be removed from RestWeatherQueryEndpoint if possible <Not SURE> or it should be conceurrenthashmap.
+***23. Different packages for different endpints etc.
+24. JSON fomat response and also pretty print+ gzip compression.
+25. snake_case.
+26. WeatherCollector.getAirports(); should have pagination
+27. getAirports() should be renamed to airports in URL
+28. Validation should be provided and seperated in updateAtmosphericInformation()
+29. Can we use E-tags/last-modified?
+30. Validation error message should be returned
+http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+31. Enable gzip compression for all responses.
